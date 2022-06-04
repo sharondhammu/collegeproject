@@ -1,0 +1,151 @@
+
+                  {% extends 'header.html' %}
+ {% load static %}
+
+
+{% block content %}
+<style type="text/css">
+    body  {
+  background-image: url("{%static 'IMAGES/IMG_20220515_151527.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+ form{
+    height: 650px;
+    width: 500px;
+    background-color: rgba(255,255,255,0.13);
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+
+
+form *{
+    font-family: 'Times New Roman',sans-serif;
+    color: #000000;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;}
+
+    form h1{
+    font-size: 50px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+     font-weight: bold;
+}
+
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder !important{
+    color: #ffffff;
+}
+
+button{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h1 {text-align: center;
+   font-family: 'Times New Roman', serif;
+font-size: 50px;
+    font-weight: bold;
+    filter: drop-shadow(30px 10px 4px #606060);
+</style>
+
+<div id="grad1">
+            <div class="row pt-5">
+                <div class="col-6" data-aos="flip-up">
+            <img src="{%static 'IMAGES/registerbf.png'%}"   align="center" width="100%">
+        </div>
+        <div class="col-6" data-aos="flip-down">
+             <form method = "POST">
+            {% csrf_token %}
+
+            <h1 class="text-center">REGISTER</h1><br>
+            <label>All fields are required.</label>
+
+      <label for="username">Enter your full name</label>     
+   <input type="text" required class="form-control mb-4" placeholder="Your full name" id="username" name="username">
+
+  <label for="emailid">E-mail</label>
+   <input type="email" required class="form-control mb-2" placeholder="enter a valid email" id="email"  name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+
+  <label for="password">Password</label>
+   <input type="password" required class="form-control mb-2" placeholder="Password" id="password"  name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  >
+
+   <label for="password"> Confirm Password</label>
+   <input type="password" required class="form-control mb-2" placeholder=" Confirm Password" id="password"  name="cpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  >
+
+    <p>Already registered? Click here to <a href="{% url 'userlogin' %}">Sign in.</a>
+  <button>SIGN UP</button>
+
+
+ 
+ </form>
+
+ </div>
+
+</div>
+{% if res == 1 %}
+                    <div class="alert alert-danger mt-3">
+                      Password could not be confirmed
+                    </div>
+                    {% endif %}
+                    
+                    {% if res == 2 %}
+                    <div class="alert alert-danger mt-3">
+                     Email id already exists
+                    </div>
+                    {% endif %}
+
+                    {% if res == 3 %}
+                    <div class="alert alert-success mt-3">
+                     Succesfully Registered
+                    </div>
+                    {% endif %}
+
+
+
+        </div>
+    </div>
+    </div><br><br>
+    
+
+{% endblock %}

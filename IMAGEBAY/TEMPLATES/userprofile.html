@@ -1,0 +1,61 @@
+{% extends 'sidebar3.html' %}
+{% block content %}
+{% load static %}
+<style type="text/css">
+	body  {
+  background-image: url("{%static 'IMAGES/nareeta-martin-pEWtWnDgGLs-unsplash.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+	h3 {
+   font-family: 'Times New Roman', serif;
+ font-weight: bold;
+font-size: 30px;
+text-align: left;}
+h1 {text-align: center;
+   font-family: 'Times New Roman', serif;
+font-size: 90px;
+    font-weight: bold;
+    filter: drop-shadow(30px 10px 4px #606060);
+
+}
+
+</style>
+<div class="row">
+	
+		<div class="text-center">
+		<h1 class="" data-aos="zoom-out">User Profile</h1>
+	
+<div class="row">
+	<div class="col-6 p-5" data-aos="fade-right">
+		{% if user.profilePicture %}
+			<img src="{{user.profilePicture.url}}" width="450px" height="450px">
+		{% endif %}
+	</div>
+
+<div class="col-6 p-5" data-aos="fade-left">
+<h3>NAME: {{user.username}}</h3><br>
+
+<h3>EMAIL: {{user.emailid}}</h3><br>
+
+<h3>PHONE NUMBER: {{user.phoneNumber}}</h3><br>
+
+<h3>DATE OF BIRTH: {{user.dob}}</h3><br>
+
+<h3>GENDER: {{user.gender}}</h3><br>
+
+<h3>CITY: {{user.city}}</h3><br>
+
+<h3>STATE: {{user.state}}</h3>
+</div>
+
+	</div>
+	
+</div>
+</div>
+
+
+{% endblock %}
+
+

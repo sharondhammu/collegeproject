@@ -1,0 +1,67 @@
+{% extends 'sidebar3.html '%}
+{% load static %}
+{% block content %}
+<style type="text/css">
+body  {
+  background-image: url("{%static 'IMAGES/patte.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+h1 {text-align: center;
+   font-family: 'Times New Roman', serif;
+   color:black;
+   font-size: 150px;
+    font-weight: bold;
+    filter: drop-shadow(30px 10px 10px #ffffff);
+}
+
+ 
+ h2 {
+   font-family: 'Times New Roman', serif;
+   font-size: 25px;
+    font-weight: bold;
+     color:black;
+     text-align: center;
+   }
+
+   p {
+   font-family: 'Times New Roman', serif;
+   font-size: 25px;
+    font-weight: bold;
+     color:black;
+     text-align: center;
+   }
+
+   #tulkit button{
+     
+    margin-top: 40px;
+    width: 25%;
+    background-color:black;
+    color: white;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', serif;
+   font-size: 25px;
+    font-weight: bold;
+    text-decoration: none !important;
+
+}
+</style>
+<div class="text-center">
+  <div class="pulki"  data-aos="zoom-out">
+    <h1>IMAGEbay</h1></div>
+    <div class="kaaju"  data-aos="flip-down">
+    <h2>IMAGE MANIPULATION - THE REVOLUTION</h2><br></div>
+    <p class="kaaju" data-aos="fade-right">In only a few clicks, you can alter images for free with IMAGEbay's photo editor. It includes all online photo editing </p><p class="tulkit" data-aos="fade-left"> capabilities, allowing you to crop, resize, add text to photos, produce photo collages, and create graphic designs with ease.</p>
+    <div id="tulkit" >
+<a href="{% url 'tools' %}"><button type="button"   style="background-color:black; margin-left:auto;margin-right:auto;display:block;margin-top:8%;margin-bottom:0%">
+  LET'S  START
+</button><!--</a>--></a></div> </div>
+
+
+{% endblock %}

@@ -1,0 +1,163 @@
+ {% extends 'sidebar3.html' %}
+ {% load static %}
+
+
+{% block content %}
+<style type="text/css">
+  body  {
+  background-image: url("{%static 'IMAGES/nareeta-martin-pEWtWnDgGLs-unsplash.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    filter: drop-shadow(30px 10px 4px #606060);
+     font-family: 'Times New Roman',sans-serif;
+}
+
+p{
+  text-align: center;
+    font-size: 25px;
+     font-weight: bold;
+     font-family: 'Times New Roman',sans-serif;
+     }
+
+      form{
+    height: 650px;
+    width: 500px;
+    background-color: rgba(255,255,255,0.13);
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 45%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 25px 17px;
+}
+
+form *{
+    font-family: 'Times New Roman',sans-serif;
+    color: #000000;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;}
+    
+ form h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    filter: drop-shadow(30px 10px 4px #606060);
+    margin-bottom: 40px;
+}
+
+label{
+    display: block;
+    margin-top: 1px;
+    font-size: 16px;
+    font-weight: 500;
+     font-weight: bold;
+}
+
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder{
+    color: #000000;
+}
+
+button{
+    margin-top: 1px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+</style>
+{% if res == 1 %}<br><br>
+<div class="alert alert-success">
+    Message Sent
+</div>
+{% endif %}
+    
+    
+  
+
+{% if msg %}<br><br>
+<div class="alert alert-danger">
+
+{{msg}}
+</div>
+{% endif %}
+
+
+
+<div class="row p-5" data-aos="fade-right">
+    <div class="col-6 pt-5 pb-5">
+      <div class="pt-5">
+        <div class="pt-5">
+    <img src="{%static 'IMAGES/carousel.webp' %}" width="400px" height="250px">
+</div>
+  </div></div>
+  
+    <div class="col-6 pt-5" data-aos="fade-up-left">
+
+       
+
+
+<form action=""   method="POST" enctype="multipart/form-data">
+     {% csrf_token %}
+     <h1>Crop image</h1>
+    
+ <div class="container-fluid"  p-5 style="font-size:15px">
+    
+<label>Choose the image to crop:</label>
+      <input type="file" name="file1" required placeholder="Upload File" accept="image/png, image/jpeg, image/webp, image/jpg" >
+
+               
+
+   <label for="message">LEFT</label>
+   <input type="number" min="0" placeholder="left dimensions"  name="le" required> 
+
+   <label for="message">UPPER</label>
+   <input type="number" min="0" placeholder="upper dimensions"  name="up" required>
+
+    <label for="message">RIGHT</label>
+    <input type="number" min="1" placeholder="right dimensions"  name="ri" required>
+
+    <label for="message">LOWER</label>
+    <input type="number" min ="0"placeholder="lower dimensions"  name="lo" required><br><br>
+
+    <button type="submit">CROP IMAGE</button>
+
+
+</div>
+ 
+
+
+</form>
+ 
+
+
+        {% endblock %}

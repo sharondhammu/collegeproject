@@ -1,0 +1,40 @@
+{% extends 'sidebar3.html' %}
+ {% load static %}
+
+
+{% block content %}
+<style type="text/css">
+
+    h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    filter: drop-shadow(30px 10px 4px #606060);
+     font-family: 'Times New Roman',sans-serif;
+}
+
+p{
+  text-align: center;
+    font-size: 25px;
+     font-weight: bold;
+     font-family: 'Times New Roman',sans-serif;
+
+}
+    
+    body  {
+  background-image: url("{%static 'IMAGES/nareeta-martin-pEWtWnDgGLs-unsplash.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+</style>
+<div class="text-center">
+    <h1 class="resultant" data-aos="zoom-out">CARTOONIZER</h1><br>
+    <p class="h" data-aos="flip-up">Here is the cartoonized image:</p><br>
+    <div class="resultant" data-aos="fade-up">
+<img src="{% static "" %}{{p}}" width="90%" height="500px"><br><br>
+<a href= "{% static "" %}{{p}}"  download><p><button style="background-color:black; color: white;">Download Image</button></p></a></div>
+
+ {% endblock %}

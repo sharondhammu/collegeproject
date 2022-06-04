@@ -1,0 +1,86 @@
+{% extends 'sidebar3.html' %}
+ {% load static %}
+
+{% block content %}
+<style type="text/css">
+
+    h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    filter: drop-shadow(30px 10px 4px #606060);
+     font-family: 'Times New Roman',sans-serif;
+}
+
+p{
+  text-align: center;
+    font-size: 25px;
+     font-weight: bold;
+     font-family: 'Times New Roman',sans-serif;
+
+}
+    
+    body  {
+  background-image: url("{%static 'IMAGES/nareeta-martin-pEWtWnDgGLs-unsplash.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+</style>
+<div class="row">
+    <div class="col-12 p-5"></div>
+    
+        <div class="row">
+
+    <h1>IMAGE SEARCH</h1><br>
+    <p>Here is the result:</p><br>
+    {% for x in l %}
+    <div class="col-4">
+    {{x}}
+   <img src="{% static "" %}{{x}}" width="300" height="300"><br><br>
+<a href= "{% static "" %}{{x}}"  download><p>Download Image</p></a>
+</div>
+    {% endfor %}
+    </div></div></div>
+<!--<div class="row">
+    <div class="col-4">
+<img src={%static 'searchimg/000001.jpg' %} width="300" height="300"><br><br>
+ <a href={%static 'searchimg/000001.jpg' %}  download><p>Download Image</p></a></div>
+<div class="col-4"> 
+    <img src={%static 'searchimg/000002.jpg' %} width="300" height="300"><br><br>
+ <a href={%static 'searchimg/000002.jpg' %}  download><p>Download Image</p></a></div>
+<div class="col-4">
+ <img src={%static 'searchimg/000003.jpg' %} width="300" height="300"><br><br>
+ <a href={%static 'searchimg/000003.jpg' %}  download><p>Download Image</p></a></div></div><br><br><br>
+<div class="row">
+    <div class="col-4">
+ <img src={%static 'searchimg/000004.jpg' %} width="300" height="300"><br><br>
+ <a href={%static 'searchimg/000004.jpg' %}  download><p>Download Image</p></a></div>
+<div class="col-4">
+ <img src={%static 'searchimg/000005.jpg' %} width="300" height="300"><br><br>
+ <a href={%static 'searchimg/000005.jpg' %}  download><p>Download Image</p></a></div>
+<div class="col-4">
+ <img src={%static 'searchimg/000006.jpg' %} width="300" height="300"><br><br>
+ <a href={%static 'searchimg/000006.jpg' %}  download><p>Download Image</p></a></div></div><br><br><br>
+<div class="row">
+    <div class="col-4">
+ <img src={%static 'searchimg/000007.jpg' %} width="300" height="300"><br><br>
+ <a href={%static 'searchimg/000007.jpg' %}  download><p>Download Image</p></a></div>
+<div class="col-4">
+ <img src={%static 'searchimg/000008.jpg' %} width="300" height="300"><br><br>
+ <a href={%static 'searchimg/000008.jpg' %}  download><p>Download Image</p></a></div>
+<div class="col-4">
+ <img src={%static 'searchimg/000009.jpg' %} width="300" height="300"><br><br>
+ <a href={%static 'searchimg/000009.jpg' %}  download><p>Download Image</p></a></div></div></div><br><br><br>-->
+
+ 
+
+ 
+
+
+
+ 
+
+ {% endblock %}

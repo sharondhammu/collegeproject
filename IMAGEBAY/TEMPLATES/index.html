@@ -1,0 +1,577 @@
+{% extends 'header.html' %}
+ {% load static %}
+{% block content %}
+<style type="text/css">
+
+
+h1 {text-align: center;
+   font-family: 'Times New Roman', serif;}
+
+   h5 {
+   font-family: 'Times New Roman', serif;}
+
+   p {
+   font-family: 'Times New Roman', serif;
+   font-size: 25px;
+    font-weight: bold;
+   }
+
+   body  {
+  background-image: url("{%static 'IMAGES/nareeta-martin-pEWtWnDgGLs-unsplash.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+.card{
+ background-color: transparent; 
+}
+
+ h3 {
+   font-family: 'Times New Roman', serif;
+ font-weight: bold;}
+
+.container-fluid .container .row {
+    font-family: 'Times New Roman', serif;
+}
+
+
+#grad1 {
+  color: light;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+<div class="container-fluid pt-5 pb-5">
+    <div class="container background-color:grey">
+        <div class="row">
+            <div class="col-6" >
+                <div class='line'>
+    
+  
+                <h1 class="head"data-aos="zoom-out"><b>Free online photo editor for everyone.</b></h1><br>
+                <p align="justify" class="para" data-aos="fade-up-right">In only a few clicks, you can alter images for free with IMAGEbay's photo editor. It includes all online photo editing capabilities, allowing you to crop, resize, add text to photos, produce photo collages, and create graphic designs with ease.</p><br><br>
+                <div class="text-center" data-aos="fade-right" >
+                <a href="{% url 'userregister' %}"><input type="button" style="background-color:black;color:white;width:140px;
+height:40px;" value="Get Started">
+</a></div>
+                </div><br></div>
+<div class="col-6" data-aos="fade-left" >
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{%static 'IMAGES/noor28.webp' %}" class="d-block w-100" style="height: 425px" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'IMAGES/noor22.webp' %}" class="d-block w-100" style="height: 425px" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'IMAGES/maxresdefault.jpg' %}" class="d-block w-100" style="height: 425px" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'IMAGES/noor27.webp' %}" class="d-block w-100" style="height: 425px" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    <div class="container" data-aos="zoom-out" >
+  <div id="grad1" class="text-center p-5">
+  <h1><b>Most popular features of IMAGEbay.</b></h1>
+</div>
+</div>
+
+
+
+<div class="container-fluid  pt-5 pb-5" >
+    <div class="container background-color:grey">
+        <div class="row ">
+            <div class="col-4" data-aos="fade-right">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Features</div>
+                <div class="card" style="">
+                    <a href="imagevideo"><img src="{%static 'IMAGES/home2.jpg' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                      <h5 class="card-title"><b>CREATE VIDEO</b></h5>
+                      <p class="card-text"> Create your personalized video just by selecting images.</p>
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <div class="col-4" data-aos="fade-up">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Features</div>
+                <div class="card" style="">
+                    <a href="emboss"><img src="{%static 'IMAGES/resize.png' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+
+                      <h5 class="card-title"><b>EMBOSS EFFECT</b></h5>
+
+                      <p class="card-text">Give your image an embossed look within seconds.</p>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-4" data-aos="fade-left">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Features</div>
+                <div class="card" style="">
+                    <a href="HDR"><img src="{%static 'IMAGES/1.webp' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                      <h5 class="card-title"><b>HDR EFFECT</b></h5>
+                      <p class="card-text">Elevate your images instantly by using our special HDR effect.</p>
+              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5 pb-5" >
+    <div class="container background-color:grey">
+        <div class="row ">
+            <div class="col-4" data-aos="fade-right">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Features</div>
+                <div class="card" style="">
+                    <a href="blend"><img src="{%static 'IMAGES/blend.webp' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                      <h5 class="card-title"><b>BLEND IMAGES</b></h5>
+                      <p class="card-text">You can provide your pictures a boost by blending them together.</p>
+                  </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-4" data-aos="fade-up">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Features</div>
+
+                <div class="card" style="">
+                    <a href="imagetext"><img src="{%static 'IMAGES/imagetext.jpg' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+
+                      <h5 class="card-title"><b>IMAGE TO TEXT</b></h5>
+
+                      <p class="card-text">Using this feature, you can convert an image having text to the text itself.</p>
+                  </div>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="col-4" data-aos="fade-left">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Features</div>
+                <div class="card" style="">
+                    <a href="collage2"><img src="{%static 'IMAGES/coolaage.webp' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                      <h5 class="card-title"><b>COLLAGE MAKER</b></h5>
+                      <p class="card-text">You can conveniently make collage of upto 10 images with collage maker.</p>
+              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <div class= "container" data-aos="zoom-out"  >
+    <div id="grad1" class="text-center p-5">
+  <h1><b>How to manipulate images?</b></h1>
+  <p class="text-center">Only four basic actions separate you from creating stunning photographs like an expert photographer.</p>
+</div>
+</div>
+
+
+<div class="container-fluid pt-5 pb-5" >
+    <div class="container background-color:grey">
+        <div class="row ">
+            <div class="col-3" data-aos="fade-up-right">
+                <div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Guide</div>
+                <div class="card" style="">
+                    <a href="blend"><img src="{%static 'IMAGES/imageedit_59_2252918138.png' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                      <h5 class="card-title"><b>1. SELECT A FEATURE</b></h5>
+                      <p class="card-text">Select any feature of your choice from the dashboard for editing.</p>
+                  </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-3" data-aos="fade-up-right">
+
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Guide</div>
+                <div class="card" style="">
+                    <a href="imagetext"><img src="{%static 'IMAGES/imageedit_57_5346173228.png' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+
+                      <h5 class="card-title"><b>2. UPLOAD AN IMAGE</b></h5>
+
+                      <p class="card-text">Upload any image to get started with the manipulation process.</p>
+                     </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" data-aos="fade-up-left">
+                <div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Guide</div>
+                <div class="card" style="">
+                    <a href="collage2"><img src="{%static 'IMAGES/imageedit_61_3947362344.png' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                      <h5 class="card-title"><b>3. ADJUST-PREVIEW</b></h5>
+                      <p class="card-text">Edit images  online with IMAGEbay's photo editor in just a few clicks.</p>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="col-3" data-aos="fade-up-left">
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Guide</div>
+                <div class="card" style="">
+                    <a href="imagetext"><img src="{%static 'IMAGES/imageedit_63_7056071637.png' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+
+                      <h5 class="card-title"><b>IMAGE TO TEXT</b></h5>
+
+                      <p class="card-text">Using this feature, you can convert an image having text to the text itself.</p>
+                     </div> 
+                    </div>
+                </div>
+            </div>
+</div><br><br><br>
+
+
+<div class="row pt-5 pb-5">
+            <div class="col-6" data-aos="fade-up-right" >
+              <img src="{%static 'IMAGES/HUH1.jpeg' %}" width="90%">  
+            </div>
+            <div class="col-6" > <h1 class="para" data-aos="zoom-out"><b>IMAGE ENHANCER</b></h1>
+            <p class="para" data-aos="fade-up-left">Fairly said, IMAGEbay simplifies the process of photo retouching. You can change photographs you like into photos you adore using our Photo Editor! It's incredibly simple to generate great-looking images with tools like crop, resize, and brightness, as well as more distinctive effects like Cartoonizer, blur tool, resize photos,transpose, and HDR effect. With the filters, you may give your photograph a unique look. Finally, a photo editor that's capable, entertaining, and simple to use!</p>
+            <div class="text-center" data-aos="fade-left">
+            <a href="{% url 'userregister' %}"><input type="button" style="background-color:black;color:white;width:140px;
+height:40px;" value="Edit a photo">
+</a></div>
+            </div>
+
+
+        </div><br><br><br>
+
+        <div class="row pt-5 pb-5">
+            <div class="col-6"> <h1 class="head" data-aos="zoom-out"><b>COLLAGE MAKER</b></h1>
+            <p class="para" data-aos="fade-right">Our Collage Maker can let you tell a tale, share an adventure, or make anything else you choose. Collage Maker from IMAGEbay allows you to simply create stunning online picture collages. Simply upload your photographs and let our Collage Wizard make a beautiful collage for you. Your posts will undoubtedly stand out from the others.</p>
+            <div class="text-center" data-aos="fade-right">
+            <a href="{% url 'userregister' %}"><input type="button" style="background-color:black;color:white;width:140px;
+height:40px;" value="Create a collage">
+</a></div></div>
+<div class="col-6" data-aos="fade-left">
+              <img src="{%static 'IMAGES/BeFunky-collage.jpg' %}" width="100%" height="70%">  
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" data-aos="zoom-out" >
+  <div id="grad1" class= "text-center p-5">
+  <h1><b>OUR RECENT BLOGS</b></h1>
+</div>
+</div>
+
+<div class="container-fluid pt-5 pb-5" >
+    <div class="container background-color:grey">
+        <div class="row ">
+
+
+            <div class="col-4" data-aos="flip-right">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Blogs</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/resize (3).jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>BEST IMAGE MANIPULATION TIPS YOU NEED TO KNOW:</b></h5>
+                      <p class="card-text">Have you ever read a magazine, noticed a puppy Labrador bigger than a house and thought – wow it looks so real?! Photo manipulation has gained a huge popularity for a few years now. It’s everywhe…</p>
+                      
+
+                  </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4" data-aos="fade-up">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Blogs</div>
+                <div class="card" style="">
+                   <img src="{%static 'IMAGES/resize (4).jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>10 BEST PHOTOGRAPHY IDEAS WORTH TRYING:</b></h5>
+                      <p class="card-text">Looking for creative ideas for photography? Many photographers find themselves out of ideas time – to – time due to this they end up using the same ideas again and again. To offer you inspiration, we have come...</p>
+                     
+                  </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4" data-aos="flip-left">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Blogs</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/resize (1).webp' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>DIGITAL IMAGE PROCESSING REAL- LIFE APPLICATIONS:</b></h5>
+                      <p class="card-text">INTRODUCTION Digital Image Processing consists of the various techniques and methods involving in the manipulation of images on a computer. Various types of operations are performed on images, which constitute...</p>
+                      
+                  </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" data-aos="zoom-in">
+                <a href="{% url 'allblogs' %}"> <input type="button" style="background-color:black;color:white;width:140px;
+height:40px;" value="VIEW ALL BLOGS"></a>
+                
+</div><br><br><br>
+
+<div class="container" data-aos="zoom-out" >
+  <div id= "grad1" class="text-center p-5" >
+  <h1><b>A WEALTH OF TUTORIALS FOR YOU</b></h1>
+</div>
+</div><br><br>
+<div class="container-fluid">
+    <div class="row">
+ <div class="col-4" data-aos="zoom-in-right">
+    <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Tutorials</div>
+                <div class="card" style="" >
+                    <video src="{%static 'IMAGES/video1.mp4' %}"controls></video>
+                    <div class="card-body">
+                      <h5 class="card-title"><b>HOW TO CROP AN IMAGE</b></h5>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="col-4" data-aos="zoom-in-up">
+    <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Tutorials</div>
+                <div class="card" style="" >
+                    <video src="{%static 'IMAGES/video2.mp4' %}"controls></video>
+                    <div class="card-body">
+                      <h5 class="card-title"><b>HOW TO FLIP AN IMAGE</b></h5>
+                
+                  </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4" data-aos="zoom-in-left">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Tutorials</div>
+                <div class="card" style="" >
+                    <video src="{%static 'IMAGES/video3.mp4' %}"controls></video>
+                    <div class="card-body">
+                      <h5 class="card-title"><b>HOW TO ROTATE AN IMAGE</b></h5>
+                </div>
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="text-center" data-aos="zoom-out-down">
+           <br><br>     <a href="{% url 'tutorial' %}"> <input type="button" style="background-color:black;color:white;width:165px;
+height:40px;" value="VIEW ALL TUTORIALS"></a>
+                
+</div><br><br><br><br>
+
+<div class="container" data-aos="zoom-out">
+  <div id="grad1" class= "text-center p-5" >
+  <h1><b>IMAGE GLOSSARY TREASURE</b></h1>
+</div>
+</div><br>
+
+<div class="container-fluid pt-5 pb-5">
+    <div class="container background-color:grey">
+        <div class="row ">
+            <div class="col-3"data-aos="flip-left">
+                <div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Glossary</div>
+                <div class="card" style="">
+                    <div class="card-body">
+                      <h3 class="card-title"><b>ASPECT RATIO</b></h3>
+                      <p class="card-text">The relationship between the horizontal and vertical dimensions of an image.</p>
+                  </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3" data-aos="flip-up">
+                <div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Glossary</div>
+                <div class="card" style="">
+                    <div class="card-body">
+                      <h3 class="card-title"><b>CONTRAST</b></h3>
+                      <p class="card-text">Contrast is the difference between the lightest and darkest regions of an image.</p>
+                  </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3" data-aos="flip-down">
+                <div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Glossary</div>
+                <div class="card" style="">
+                    <div class="card-body">
+                      <h3 class="card-title"><b>DIGITAL IMAGE</b></h3>
+                      <p class="card-text">Image captured by imaging device and represented in computer as rectangular grid.</p>
+                  </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3" data-aos="flip-left">
+                <div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Glossary</div>
+                <div class="card" style="">
+                    <div class="card-body">
+                      <h3 class="card-title"><b>DISTORTION</b></h3>
+                      <p class="card-text">With Distortion, you can add some deformation to an image, either lightly or very noticeably.</p>
+                  </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+            <div class="text-center" data-aos="zoom-in">
+                <a href="{% url 'glossary' %}"> <input type="button" style="background-color:black;color:white;width:160px;
+height:40px;" value="VIEW ALL GLOSSARY"></a>
+</div><br><br><br>
+
+    <div class="container" data-aos="zoom-out">
+  <div id="grad1" class= "text-center p-5" >
+  <h1><b>LIVE NEWS</b></h1>
+</div>
+</div><br>
+
+<div class="container-fluid pt-5 pb-5">
+    <div class="container background-color:grey">
+        <div class="row ">
+
+
+            <div class="col-4" data-aos="zoom-in-right">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Live news</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/news1.webp' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><b>The latest macOS beta includes a fix for the Studio Display webcam</b></h3>
+                      <p class="card-text">When we got our hands on Apple's $1,599 Studio Display last month , one issue soon became apparent: the webcam offered pretty subpar image quality. Apple said it was working on a fix , and now that… [+1060 chars]</p>
+                     
+
+                  </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-4" data-aos="zoom-in-up">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Live news</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/news2.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><b>Kebab seller image wins international food photo contest</b></h3>
+                      <p class="card-text">Image source, Debdatta Chakraborty A photo of a street food vendor working at a smoke-covered oven has won a major food photography award. Debdatta Chakraborty was named as the overall winner of P… [+4028 chars]</p>
+                      
+
+                  </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-4" data-aos="zoom-in-left">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Live news</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/news3.webp' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><b>Astonishing new image of Jupiter from NASA and a citizen scientist!</b></h3>
+                      <p class="card-text">NASA has just released this astonishing new image of Jupiter captured by the Juno space probe during its 40th class orbit around the giant planet. That black spot is a shadow from the Jovian moon Ganymede. From NASA:… [+979 chars]</p>
+                     
+                  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center" data-aos="fade-up">
+<a href="{% url 'livenews' %}"> <input type="button" style="background-color:black;color:white;width:165px;
+height:40px;" value="VIEW ALL LIVE NEWS"></a>
+</div><br><br><br>
+
+<div class="container" data-aos="zoom-out">
+  <div id="grad1" class= "text-center p-5" >
+  <h1><b>CONTACT US</b></h1>
+</div>
+</div>
+
+<div class="col-12" data-aos="flip-up">
+    <div class="row" width="50%">
+              <img src="{%static 'IMAGES/quino-al-4SNUcHPiC8c-unsplash-removebg-preview.png' %}" width="90%" height="450px">  
+            </div>
+<div class="text-center" data-aos="zoom-out-down">
+            <a href="{% url 'contactus' %}"> <input type="button" style="background-color:black;color:white;width:140px;
+height:40px;" value="CONTACT US"></a>
+</div><br><br><br>
+</div>
+
+
+
+
+
+
+    
+
+    
+
+
+       
+
+{% endblock %}

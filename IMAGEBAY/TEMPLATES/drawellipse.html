@@ -1,0 +1,146 @@
+{% extends 'sidebar3.html' %}
+ {% load static %}
+
+
+{% block content %}
+<style type="text/css">
+    body  {
+  background-image: url("{%static 'IMAGES/nareeta-martin-pEWtWnDgGLs-unsplash.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+
+
+
+
+h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    filter: drop-shadow(30px 10px 4px #606060);
+     font-family: 'Times New Roman',sans-serif;
+}
+
+p{
+  text-align: center;
+    font-size: 25px;
+     font-weight: bold;
+     font-family: 'Times New Roman',sans-serif;
+     }
+
+      form{
+    height: 530px;
+    width: 500px;
+    background-color: rgba(255,255,255,0.13);
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 45%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 25px 17px;
+}
+
+form *{
+    font-family: 'Times New Roman',sans-serif;
+    color: #000000;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;}
+    
+ form h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    filter: drop-shadow(30px 10px 4px #606060);
+    margin-bottom: 40px;
+}
+
+label{
+    display: block;
+    margin-top: 1px;
+    font-size: 16px;
+    font-weight: 500;
+     font-weight: bold;
+}
+
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+textarea{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder{
+    color: #000000;
+}
+
+button{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    
+    
+</style>
+ 
+<div class="row p-5">
+    <div class="col-6 pt-5 pb-5"data-aos="fade-right">
+       <div class="gif pt-5">
+        <div class="g pt-5">
+    <img src="{%static 'IMAGES/drawellipse (3).gif' %}" width="400px" height="250px"></div></div>
+  </div>
+  
+    <div class="col-6 pt-5" data-aos="fade-up-left">
+<form action=""   method="POST" enctype="multipart/form-data">
+     {% csrf_token %}
+     <h1>Animated text</h1>
+
+
+ <label>Choose the image:</label>
+  <input type="file" name="file1" required placeholder="Upload File" accept="image/png, image/jpeg, image/webp, image/jpg" ><br><br><br>
+  <label for="">Your text here:</label><br>
+<textarea name="t1" required></textarea>
+<label>Please do not enter more than 13 characters including spaces.</label>
+  
+  
+  <br><br>
+  
+  <button>CREATE GIF</button>
+
+</div>
+</form>
+<script>
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+</script>
+{% endblock %}

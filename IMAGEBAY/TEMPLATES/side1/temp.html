@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="side.css">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+	<div class="btn1"> <span class="fas fa-bars"></span> </div>
+<nav class="sidebar">
+    <div class="text"> BBBootstrap.com </div>
+    <ul class="main_side">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li> <a href="#" id="1">Pages <span class="fas fa-caret-down"></span> </a>
+            <ul class="item-show-1">
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Our Team</a></li>
+            </ul>
+        </li>
+        <li> <a href="#" id="2">Services <span class="fas fa-caret-down"></span> </a>
+            <ul class="item-show-2">
+                <li><a href="#">App Design</a></li>
+                <li><a href="#">Web Design</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Users</a></li>
+        <li><a href="#">Message</a></li>
+        <li><a href="#">Bookmark</a></li>
+        <li><a href="#">Files</a></li>
+    </ul>
+</nav>
+<div class="content">
+    <div class="header"> Main content goes here </div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$('.btn1').click(function(){
+$(this).toggleClass("click");
+$('.sidebar').toggleClass("show");
+});
+
+
+$('.sidebar ul li a').click(function(){
+var id = $(this).attr('id');
+$('nav ul li ul.item-show-'+id).toggleClass("show");
+$('nav ul li #'+id+' span').toggleClass("rotate");
+
+});
+
+$('nav ul li').click(function(){
+$(this).addClass("active").siblings().removeClass("active");
+});
+</script>
+</body>
+</html>

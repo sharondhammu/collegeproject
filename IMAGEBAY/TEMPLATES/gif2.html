@@ -1,0 +1,250 @@
+{% extends 'sidebar3.html' %}
+ {% load static %}
+
+
+{% block content %}
+<style type="text/css">
+     body  {
+  background-image: url("{%static 'IMAGES/nareeta-martin-pEWtWnDgGLs-unsplash.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+* {box-sizing: border-box;}
+
+.img-comp-container {
+  position: relative;
+  height: 200px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+
+}
+
+.img-comp-img img {
+  display:block;
+  vertical-align:middle;
+  align-items: center;
+  width: 400px;
+  height: 250px;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #000000;
+  opacity: 0.7;
+  border-radius: 50%;
+
+
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    filter: drop-shadow(30px 10px 4px #606060);
+     font-family: 'Times New Roman',sans-serif;
+}
+
+p{
+  text-align: center;
+    font-size: 25px;
+     font-weight: bold;
+     font-family: 'Times New Roman',sans-serif;
+     }
+
+      form{
+    height: 500px;
+    width: 500px;
+    background-color: rgba(255,255,255,0.13);
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 45%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 25px 17px;
+}
+
+form *{
+    font-family: 'Times New Roman',sans-serif;
+    color: #000000;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;}
+    
+ form h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    filter: drop-shadow(30px 10px 4px #606060);
+    margin-bottom: 40px;
+}
+
+label{
+    display: block;
+    margin-top: 1px;
+    font-size: 16px;
+    font-weight: 500;
+     font-weight: bold;
+}
+
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+
+::placeholder{
+    color: #000000;
+}
+
+button{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    
+    
+</style>
+<script>
+function initComparisons() {
+  var x, i;
+  /*find all elements with an "overlay" class:*/
+  x = document.getElementsByClassName("img-comp-overlay");
+  for (i = 0; i < x.length; i++) {
+    /*once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function:*/
+    compareImages(x[i]);
+  }
+  function compareImages(img) {
+    var slider, img, clicked = 0, w, h;
+    /*get the width and height of the img element*/
+    w = img.offsetWidth;
+    h = img.offsetHeight;
+    /*set the width of the img element to 50%:*/
+    img.style.width = (w / 2) + "px";
+    /*create slider:*/
+    slider = document.createElement("DIV");
+    slider.setAttribute("class", "img-comp-slider");
+    /*insert slider*/
+    img.parentElement.insertBefore(slider, img);
+    /*position the slider in the middle:*/
+    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    /*execute a function when the mouse button is pressed:*/
+    slider.addEventListener("mousedown", slideReady);
+    /*and another function when the mouse button is released:*/
+    window.addEventListener("mouseup", slideFinish);
+    /*or touched (for touch screens:*/
+    slider.addEventListener("touchstart", slideReady);
+    /*and released (for touch screens:*/
+    window.addEventListener("touchend", slideFinish);
+    function slideReady(e) {
+      /*prevent any other actions that may occur when moving over the image:*/
+      e.preventDefault();
+      /*the slider is now clicked and ready to move:*/
+      clicked = 1;
+      /*execute a function when the slider is moved:*/
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+    function slideFinish() {
+      /*the slider is no longer clicked:*/
+      clicked = 0;
+    }
+    function slideMove(e) {
+      var pos;
+      /*if the slider is no longer clicked, exit this function:*/
+      if (clicked == 0) return false;
+      /*get the cursor's x position:*/
+      pos = getCursorPos(e)
+      /*prevent the slider from being positioned outside the image:*/
+      if (pos < 0) pos = 0;
+      if (pos > w) pos = w;
+      /*execute a function that will resize the overlay image according to the cursor:*/
+      slide(pos);
+    }
+    function getCursorPos(e) {
+      var a, x = 0;
+      e = (e.changedTouches) ? e.changedTouches[0] : e;
+      /*get the x positions of the image:*/
+      a = img.getBoundingClientRect();
+      /*calculate the cursor's x coordinate, relative to the image:*/
+      x = e.pageX - a.left;
+      /*consider any page scrolling:*/
+      x = x - window.pageXOffset;
+      return x;
+    }
+    function slide(x) {
+      /*resize the image:*/
+      img.style.width = x + "px";
+      /*position the slider:*/
+      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+    }
+  }
+}
+</script>
+<div class="row">
+    <div class="col-6 pt-5">
+       <h1 class="head"  data-aos="zoom-out">Before and after:</h1><br>
+
+<p class="text"  data-aos="flip-down">Click and slide the black slider to experience before and after results:</p><br>
+
+<div class="img-comp-container ps-5" data-aos="fade-right">
+  <div class="img-comp-img">
+    <img src="{%static 'IMAGES/g2 (4).gif' %}" width="300" height="200">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="{%static 'IMAGES/bubbly.jpg' %}" width="300" height="200">
+  </div>
+</div>
+    </div>
+    <div class="col-6 pt-5" data-aos="fade-up-left">
+<form action=""   method="POST" enctype="multipart/form-data">
+     {% csrf_token %}
+
+<h1>Bubble gif</h1>
+  <input type="file" name="file1" required placeholder="Upload File" accept="image/png, image/jpeg, image/webp, image/jpg" ><br><br>
+  
+
+  
+  
+  <button>CREATE GIF</button>
+
+
+</div>
+</form>
+<script>
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+</script>
+{% endblock %}

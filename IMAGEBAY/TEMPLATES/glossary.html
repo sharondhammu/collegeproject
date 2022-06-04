@@ -1,0 +1,179 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+
+<style type="text/css">
+
+    .letters a{
+        color:black;
+        font-size: 30px;
+        text-decoration: none;
+    }
+    .letters ul li{
+        display: inline-block;
+        width: 20%;
+        margin: 10px;
+        text-align: center;
+
+
+    }
+    .letters li:hover{
+        background-color: cyan;
+        border-radius: 20px;
+    }
+
+
+
+#smile h1{
+   font-family: 'Times New Roman', serif;
+
+
+
+text-align: center;
+   font-family: 'Times New Roman', serif;
+font-size: 100px;
+    font-weight: bold;
+    filter: drop-shadow(30px 10px 4px #606060);}
+    
+    
+   body  {
+  background-image: url("{%static 'IMAGES/IMG_20220515_122341.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+#smile h1{
+     font-family: 'Times New Roman', serif;
+}
+ h1{
+     font-family: 'Times New Roman', serif;
+}
+h3{
+     font-family: 'Times New Roman', serif;
+     font-weight: bold;
+}
+</style>
+
+<div class="container-fluid pt-5 pb-5">
+    <div class="container background-color:grey">
+        <div class="row">
+
+                <div class="col-6" data-aos="zoom-in-right">
+<div>
+            <img src="{%static 'IMAGES/imageedit_4_8061599093-removebg-preview.png' %}"   align="center" width="100%" height="400px"></div>
+            </div>
+        <div class="col-6 pt-5" data-aos="zoom-in-left">
+            <div id="smile">
+            <h1>GLOSSARY</h1>
+        </div>
+    </div>
+            </div>
+         </div>
+      </div>
+
+<!--<div class="container-fluid p-5">
+    <div class="container" data-aos="flip-right">
+        
+        <a href="{% url 'glossary' %}" style="text-decoration: none;font-size: 50px; color: black;">ALL</a>
+        <a href="{% url 'glossaryletter' id='A' %}"  style="text-decoration: none; font-size: 50px; color: black;" >A</a>
+        <a href="{% url 'glossaryletter' id='B' %}"  style="text-decoration: none; font-size: 50px; color: black;">B</a>
+        <a href="{% url 'glossaryletter' id='C' %}"  style="text-decoration: none; font-size: 50px; color: black;" >C</a>
+        <a href="{% url 'glossaryletter' id='D' %}"  style="text-decoration: none; font-size: 50px; color: black;">D</a>
+        <a href="{% url 'glossaryletter' id='E' %}"  style="text-decoration: none; font-size: 50px; color: black;">E</a>
+        <a href="{% url 'glossaryletter' id='F' %}"  style="text-decoration: none; font-size: 50px; color: black;">F</a>
+        <a href="{% url 'glossaryletter' id='G' %}"  style="text-decoration: none; font-size: 50px; color: black;">G</a>
+        <a href="{% url 'glossaryletter' id='H' %}"  style="text-decoration: none; font-size: 50px; color: black;">H</a>
+        <a href="{% url 'glossaryletter' id='I' %}"  style="text-decoration: none; font-size: 50px; color: black;">I</a>
+        <a href="{% url 'glossaryletter' id='J' %}"  style="text-decoration: none; font-size: 50px; color: black;">J</a>
+        <a href="{% url 'glossaryletter' id='K' %}"  style="text-decoration: none; font-size: 50px; color: black;">K</a>
+        <a href="{% url 'glossaryletter' id='L' %}"  style="text-decoration: none; font-size: 50px; color: black;">L</a>
+        <a href="{% url 'glossaryletter' id='M' %}"  style="text-decoration: none; font-size: 50px; color: black;">M</a>
+        <a href="{% url 'glossaryletter' id='N' %}"  style="text-decoration: none; font-size: 50px; color: black;">N</a>
+        <a href="{% url 'glossaryletter' id='O' %}"  style="text-decoration: none; font-size: 50px; color: black;">O</a>
+        <a href="{% url 'glossaryletter' id='P' %}"  style="text-decoration: none; font-size: 50px; color: black;">P</a>
+        <a href="{% url 'glossaryletter' id='Q' %}"  style="text-decoration: none; font-size: 50px; color: black;">Q</a>
+        <a href="{% url 'glossaryletter' id='R' %}"  style="text-decoration: none; font-size: 50px; color: black;">R</a>
+        <a href="{% url 'glossaryletter' id='S' %}"  style="text-decoration: none; font-size: 50px; color: black;">S</a>
+        <a href="{% url 'glossaryletter' id='T' %}"  style="text-decoration: none; font-size: 50px; color: black;">T</a>
+        <a href="{% url 'glossaryletter' id='U' %}"  style="text-decoration: none; font-size: 50px; color: black;">U</a>
+        <a href="{% url 'glossaryletter' id='V' %}"  style="text-decoration: none; font-size: 50px; color: black;">V</a>
+        <a href="{% url 'glossaryletter' id='W' %}"  style="text-decoration: none; font-size: 50px; color: black;">W</a>
+        <a href="{% url 'glossaryletter' id='X' %}"  style="text-decoration: none; font-size: 50px; color: black;">X</a>
+        <a href="{% url 'glossaryletter' id='Y' %}"  style="text-decoration: none; font-size: 50px; color: black;">Y</a>
+        <a href="{% url 'glossaryletter' id='Z' %}"  style="text-decoration: none; font-size: 50px; color: black;">Z</a>
+    </div>
+</div>
+</div>-->
+
+<div class="container-fluid p-5 shadow">
+    <div class="container bg-light bg-opacity-50" >
+
+        <div class="row" style="background-color:transparent;">
+            <div class="col-3" data-aos="fade-up">
+                <div class="container letters ">
+                    <ul type="none">
+                    <li><a href="{% url 'glossary' %}">All</a></li>
+                    <li><a href="{% url 'glossaryletter' id='A' %}">A</a></li>
+                    <li><a href="{% url 'glossaryletter' id='B' %}">B</a></li>
+                    <li><a href="{% url 'glossaryletter' id='C' %}">C</a></li>
+                    <li><a href="{% url 'glossaryletter' id='D' %}">D</a></li>
+                    <li><a href="{% url 'glossaryletter' id='E' %}">E</a></li>
+                    <li><a href="{% url 'glossaryletter' id='F' %}">F</a></li>
+                    <li><a href="{% url 'glossaryletter' id='G' %}">G</a></li>
+                    <li><a href="{% url 'glossaryletter' id='H' %}">H</a></li>
+                    <li><a href="{% url 'glossaryletter' id='I' %}">I</a></li>
+                    <li><a href="{% url 'glossaryletter' id='J' %}">J</a></li>
+                    <li><a href="{% url 'glossaryletter' id='K' %}">K</a></li>
+                    <li><a href="{% url 'glossaryletter' id='L' %}">L</a></li>
+                    <li><a href="{% url 'glossaryletter' id='M' %}">M</a></li>
+                    <li><a href="{% url 'glossaryletter' id='N' %}">N</a></li>
+                    <li><a href="{% url 'glossaryletter' id='O' %}">O</a></li>
+                    <li><a href="{% url 'glossaryletter' id='P' %}">P</a></li>
+                    <li><a href="{% url 'glossaryletter' id='Q' %}">Q</a></li>
+                    <li><a href="{% url 'glossaryletter' id='R' %}">R</a></li>
+                    <li><a href="{% url 'glossaryletter' id='S' %}">S</a></li>
+                    <li><a href="{% url 'glossaryletter' id='T' %}">T</a></li>
+                    <li><a href="{% url 'glossaryletter' id='U' %}">U</a></li>
+                    <li><a href="{% url 'glossaryletter' id='V' %}">V</a></li>
+                    <li><a href="{% url 'glossaryletter' id='W' %}">W</a></li>
+                    <li><a href="{% url 'glossaryletter' id='X' %}">X</a></li>
+                    <li><a href="{% url 'glossaryletter' id='Y' %}">Y</a></li>
+                    <li><a href="{% url 'glossaryletter' id='Z' %}">Z</a></li>
+            
+                    </ul>
+            
+                </div>
+            
+
+
+            </div>
+   <div class="col-9">
+                {% if glossary %}
+                {% for x in glossary %}
+                <div class="col-12 p-5 border shadow" data-aos="zoom-out">
+                    <details>
+                     <summary class="text-capitalize bold" style="font-size: 20px; font-weight: bold; font-family: 'Times New Roman', serif;" f>{{x.word}}</summary>
+                    <p>{{x.meaning}}</p>
+                </details>
+                </div>
+                      
+                {% endfor %}
+                {% else %}
+<div class="pt-5">
+                <div class="alert alert-danger p-5 ">
+                    <h4>No Words Found</h4>
+                </div></div>
+            {% endif %}
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+        {% endblock %}
+
+

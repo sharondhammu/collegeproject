@@ -1,0 +1,135 @@
+{% extends 'sidebar3.html' %}
+{%load static %}
+ {% block content %}
+
+ <style type="text/css">
+      body  {
+  background-image: url("{%static 'IMAGES/nareeta-martin-pEWtWnDgGLs-unsplash.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    filter: drop-shadow(30px 10px 4px #606060);
+     font-family: 'Times New Roman',sans-serif;
+}
+
+p{
+  text-align: center;
+    font-size: 25px;
+     font-weight: bold;
+     font-family: 'Times New Roman',sans-serif;
+
+}
+
+form{
+    height: 500px;
+    width: 500px;
+    background-color: rgba(255,255,255,0.13);
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 45%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 25px 17px;
+}
+
+
+form *{
+    font-family: 'Times New Roman',sans-serif;
+    color: #000000;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;}
+
+    form h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    filter: drop-shadow(30px 10px 4px #606060);
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+label{
+    display: block;
+    margin-top: 1px;
+    font-size: 16px;
+    font-weight: 500;
+     font-weight: bold;
+}
+
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder{
+    color: #ffffff;
+}
+
+ form button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+ </style>
+
+ <div class="container-fluid">
+     <div class="container">
+         <div class="row">
+             <div class="col-6">
+                <div class="text-center">
+               <br><br> <img src="{%static 'imageedit_1_3496621997.png' %}" width="500px"> </div>
+             </div>
+
+             <div class="col-6">
+
+                 <form method="POST">
+                     {% csrf_token %}
+                      <h1>ADD REVIEW</h1>
+
+                     <label>Subject</label>
+                     <input type="text" class="form-control mb-4" name="subject" required>
+
+
+                     <label>Review</label>
+                     <textarea class="mb-4 form-control" name="review" required></textarea> 
+
+<button>ADD REVIEW</button>                 </form><br><br>
+
+                 {% if res == 1%}
+                 <div class="alert alert-success mt-4">
+                     Your Feedback has been saved successfully!
+                 </div>
+                 {% endif %}
+             </div>
+            
+         </div>
+     </div>
+ </div>
+ {% endblock %}

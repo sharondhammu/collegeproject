@@ -1,0 +1,295 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+
+		body  {
+  background-image: url("IMAGES/IMG_20220515_122341.jpg");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+		#sidebar {
+  background-color: rgba(0,0,0,0.2)!important;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  
+}
+.link1{font-size: 20px; border-bottom:2px solid #ccc  }
+.link1 a{text-decoration: none;}
+
+
+	</style>
+
+
+	<div class="row">
+		<div class="col-3">
+<div id ="sidebar">
+	<ul type="none">
+    <li class="link1">
+                    <a href="{% url 'addreviews' %}">Add review</a>
+
+                    <li class="link1">
+                    <a href="{% url 'changepassword' %}">Change password</a>
+
+                <li class="link1">
+                    <a href="{% url 'tools' %}">File contents</a>
+                  
+              </li>
+
+               <li class="link1">
+                    <a href="{% url 'editprofile' %}">Edit profile</a>
+                  
+              </li>
+
+               <li class="link1">
+                    <a href="{% url 'cropanimage' %}">Crop an image</a>
+                  
+              </li>
+
+               <li class="link1">
+                    <a href="{% url 'transposeanimage' %}">Transpose an image</a>
+                  
+              </li>
+
+              <li><a href="{% url 'blureffect' %}">Blur effect</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'resize' %}">Resize image</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'grayscale' %}">Grayscale image</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'facerecognition' %}">Face detection</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'addlogo' %}">Add logo</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'imagevideo' %}">Create video</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'watermark' %}">Add watermark</a>
+                  
+              </li>
+
+               <li>
+                    <a href="{% url 'cartoonimage' %}">Cartoon image</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'filters' %}">Filters</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'contour' %}">Contour image</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'edgeenhance' %}">Edge enhancement</a>
+                  
+              </li>
+
+               <li>
+                    <a href="{% url 'emboss' %}">Emboss effect</a>
+                  
+              </li>
+
+               <li>
+                    <a href="{% url 'findedge' %}">Find edges</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'smooth' %}">Smoothen image</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'sharpen' %}">Sharpen image</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'sepia' %}">Sepia effect</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'pencil' %}">Pencil sketch effect</a>
+                  
+              </li>
+
+               <li>
+                    <a href="{% url 'HDR' %}">HDR effect</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'invert' %}">Invert effect</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'summer' %}">Summer effect</a>
+                  
+              </li>
+
+               <li>
+                    <a href="{% url 'winter' %}">Winter effect</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'vignette' %}">Vignette effect</a>
+                  
+              </li>
+
+              
+
+               <li>
+                    <a href="{% url 'blend' %}">Blend images</a>
+                  
+              </li>
+
+
+               <li>
+                    <a href="{% url 'pngjpg' %}">png to jpg</a>
+                  
+              </li>
+
+
+               <li>
+                    <a href="{% url 'analysis' %}"> Star analysis</a>
+                  
+              </li>
+
+               <li>
+                    <a href="{% url 'textimage' %}"> Text to image</a>
+                  
+              </li>
+
+            
+
+
+
+              <li>
+                    <a href="{% url 'gif' %}"> Create gif</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'imagetext' %}">Image to text</a>
+                  
+              </li>
+ 
+
+              <li>
+                    <a href="{% url 'changepassword' %}">Change password</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'movingtext' %}">Moving text on image1</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'drawellipse' %}">Moving text on image2</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'brightness' %}">Change brightness</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'contrast' %}">Change contrast</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'saturation' %}">Change saturation</a>
+                  
+              </li>
+
+               <li>
+                    <a href="{% url 'adjust' %}">Adjust image</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'sincity' %}">Sincity effect</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'vintage' %}">Vintage effect</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'collage' %}">Make collage</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'collage2' %}">Make collage 2</a>
+                  
+              </li>
+
+
+              <li>
+                    <a href="{% url 'collage6' %}">Make collage 6</a>
+                  
+              </li>
+
+              <li>
+                    <a href="{% url 'collage8' %}">Make collage 8</a>
+                  
+              </li>
+		</div>
+	</div>
+		<div class="col-9">
+		</div>
+
+        {% block content %}
+        {% endblock %}

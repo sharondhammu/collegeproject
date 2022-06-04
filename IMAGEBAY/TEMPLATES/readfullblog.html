@@ -1,0 +1,43 @@
+{% extends 'header.html' %}
+ {% load static %}
+
+
+{% block content %}
+<style type="text/css">
+    
+body  {
+  background-image: url("{%static 'IMAGES/nareeta-martin-pEWtWnDgGLs-unsplash.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+a{
+     font-family: 'Times New Roman', serif;
+}
+h5{
+ font-family: 'Times New Roman', serif;
+}
+
+h1{
+     font-family: 'Times New Roman', serif;
+}
+</style>
+
+<div class="container-fluid p-5"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 border shadow p-5">
+            <h2 class="text-center"><b>{{data.title}}</b></h2><br><br>
+
+            <img src="{{data.image.url}}" width="100%">
+
+            <p>Date: {{data.registerDate}}</p>
+
+            <p class="lh-lg">{{data.content|safe}}</p>
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}

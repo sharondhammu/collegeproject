@@ -1,0 +1,94 @@
+{% extends 'header.html' %}
+ {% load static %}
+
+
+{% block content %}
+<style>
+     #grad1 {
+           
+         
+           background-image: linear-gradient(#80d0c7, #304da1);
+           background-size: cover ;
+        }
+    .heading{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:azure;
+    }
+    .heading span{
+        border-bottom: 3px silver;
+    }
+
+    
+  
+
+      
+
+      .content {
+        position: absolute; /* Position the background text */
+        bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+        background: rgb(0, 0, 0); /* Fallback color */
+        background:  #6ac8bd; /* Black background with 0.5 opacity */
+        color: #304da1;  /* Grey text */
+        width: 100%; /* Full width */
+        padding: 10px; /* Some padding */
+        opacity: 0.5;
+        text-align: center;
+
+    }
+
+      
+    
+</style>
+<div style="height: 550px">
+    
+   <div id="grad1"> <img src="{%static 'IMAGES\film12-removebg-preview.png'%}" width="100%" height="100%" alt=""><div class="centered pt-5 "></div><div class="content" p-0>
+    <h1>IMAGE MANIPULATION - THE REVOLUTION</h1>
+    <p>"There are 3 key things for good photography: the camera, lighting and <b>IMAGEbay</b>" </p>
+  </div> </div>
+ 
+</div>
+<div class="container-fluid bg-dark text-dark opacity: .5">
+    <h1 class="elementor-background-slideshow text-center height=100% width=50%"></h1>
+</div>
+<div class="container-fluid pt-5 pb-5">
+    <div class="container background-color:grey">
+        <div class="row ">
+            <div class="col-4">
+                <div class="card" style="">
+                    <img src="" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Read Full Blog</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-4">
+
+                <div class="card" style="">
+                    <img src="" class="card-img-top" alt="...">
+                    <div class="card-body">
+
+                      <h5 class="card-title">Card title</h5>
+
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Read Full Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="">
+                    <img src="" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Read Full Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

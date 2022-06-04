@@ -1,0 +1,331 @@
+{% load static %}
+
+
+<!DOCTYPE html> 
+<html>
+ <head>
+   <title></title>
+   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}"> 
+   <link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}"> 
+   <link rel="icon" type="image/png" sizes="32x32" href="{%static '/favicon-32x32.png' %}">
+   <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css">
+   <script type="text/javascript" src="{%static 'js/bootstrap.bundle.min.js' %}"></script>
+   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <style type="text/css">
+
+    .navbar-inner {
+    background-color:transparent;
+   
+
+
+}
+    
+#navbar{
+  
+}
+
+    
+    .navbar .navbar-nav .nav-item{
+      margin-left: 30px;
+
+
+    }
+    .navbar .navbar-nav .nav-item .nav-link{
+      font-weight: bold;
+      font-size: 13px;
+      text-transform:;
+      color: black;
+      text-align: center;
+    }
+
+    
+
+    
+
+    
+
+
+
+    }
+    .heading{
+      font-family: Quicksand;
+      font-size: 16px;
+      
+    }
+
+    div .container-fluid{
+  height: 100px;
+  width: 25%;
+  
+  
+} 
+
+
+
+
+
+.text-line {
+    background-color: transparent;
+   
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #eeeeee 2px;
+    padding: 3px 10px;
+  }
+
+  
+
+
+
+a:hover {
+  color: #413E4C !important;
+  transform: scale(1.2);
+  text-decoration: none;
+  border-bottom: 5px solid 
+}
+
+
+
+
+
+
+#show .logo img {
+        width: 100%;
+        transition: 0.5s all ease-in-out;
+    }
+       
+    .logo:hover img {
+        transform: scale(1.5);
+    }
+
+.noor .row {
+  color: white;
+}
+
+h1{
+   filter: drop-shadow(30px 10px 4px #606060);
+}
+
+h2 {text-align: center;
+   font-family: 'Times New Roman', serif;}
+
+p {text-align: center;
+   font-family: 'Times New Roman', serif;
+   font-size: 25px;}
+
+
+a{
+   font-family: 'Times New Roman', serif;}
+}
+
+
+
+</style>
+
+  
+ 
+    
+
+
+</head>
+<body>
+  <div id="show">
+    <div class="logo" data-aos="zoom-in">
+    
+   <!-- <div class="container p-1"> -->
+    <div class="row p-0" style="background-color:black;">
+    <div class="col-12 pt-1">
+      <p class="grab mb-0">
+        <marquee behavior="scroll" direction="scroll " onmouseover='this.stop()' onmouseout='this.start()'>
+          <img src="{%static 'IMAGES\newlogo.png'%}" style="width:140px;height:50px;">
+   </marquee>
+ </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+  
+ 
+ 
+
+
+
+  <nav id ="navbar"class="navbar navbar-expand-lg navbar-dark bg-custom-2">
+  <div class="container-fluid" data-aos="flip-right">
+    <div class="text-center">
+     </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="nav navbar-nav navbar-right">
+      <ul class="navbar-nav me-auto  mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active a1" aria-current="page"  href="{% url 'index' %}"><i class="icofont-ui-home style= icofont-2x"></i><br>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active a2" aria-current="page" href="{% url 'aboutus' %}"><i class="icofont-group style= icofont-2x"></i><br>About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link a3 " href="{% url 'allblogs' %}"><i class="icofont-file-text style= icofont-2x"></i><br>Blogs</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link a5 " href="{% url 'tutorial' %}"><i class="icofont-computer style= icofont-2x"></i><br>Tutorials</a>
+        </li>
+         <li class="nav-item dropdown">
+          
+          
+
+        
+       
+         <li class="nav-item">
+          <a class="nav-link a1" href="{% url 'glossary' %}"><i class="icofont-search-document style= icofont-2x"></i><br>Image Glossary</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'livenews' %}"><i class="icofont-newspaper style= icofont-2x"></i><br>News</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'contactus' %}"><i class="icofont-phone-circle style= icofont-2x"></i><br>Contact Us</a>
+        </li>
+      </ul>
+    </ul>
+
+    {% if request.session.userid %}
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+          <a class="nav-link  " href="{% url 'dashboard' %}"> <i class="icofont-login style= icofont-2x"></i><br>Dashboard</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link  active"   href="{% url 'logout' %}"><i class="icofont-logout style= icofont-2x"></i><br>Logout</a>
+        </li>
+</ul>
+        {% else %}
+
+      
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" class="" style="" aria-current="page" href="{% url 'userlogin' %}"> <i class="icofont-login style= icofont-2x"></i><br>Login</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active"  class="" style=""   aria-current="page" href="{% url 'userregister' %}"><i class="icofont-contact-add style= icofont-2x"></i><br>Register</a>
+        </li>
+
+         
+
+        {% endif %}
+    </ul>
+
+     
+    </div>
+  </div>
+</nav>
+</div>
+<script>
+    window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    
+    document.getElementById("navbar").style.background = "#8AFFFF";
+    
+  } else {
+   
+    document.getElementById("navbar").style.background = "none";
+    
+  }
+}
+
+
+
+
+</script>
+
+
+
+
+
+ 
+
+{% block content %}
+
+
+{% endblock %}
+
+<div class='container-fluid footer p-5 'data-aos="flip-up" style='background-color: black; border-radius: 90px 0px 0px 0px;'>
+  <div class='container'>
+    <div class='row pe-5'>
+      <div class='col-6' data-aos="fade-up">
+        <h2 style="color:white;"><b>  Start using IMAGEbay today.</b></h2><br>
+        <div class='row'>
+          <div class='col-8'>
+            <div class="text-center" data-aos="zoom-out">
+            <img src="{%static 'IMAGES\newlogo.png'%}" style="width:150px;height:60px;"><br><br><p style="color: white;"><div class="text-center ps-4"data-aos="zoom-out" style="color:white; font-size: 15px;"><b class="ok" data-aos="fade-up"><div class="text-center"><p>Image Manipulation - The Revolution</p></b></div></p></div>
+          </div>
+        </div>
+        </div><br>
+        <div class='row'>
+          <div class="col-12 pe-5">
+                          <p class="lol" data-aos="fade-up" style="color: white; font-size: 20px;"><br>"There are 3 key things for good photography:<br> the camera ,<br>the lighting<br> <b> and the IMAGEbay</b>" </p>
+          </div>
+          
+          </div>
+        </div>
+        <div class='col-6'>
+          <div class="text-center ps-5" data-aos="zoom-out">
+          <img src="{%static 'IMAGES\footer5-removebg-preview2.png'%}" style="width:350px;height:150px; ">
+          <br><br><br><br><br></div>
+          <div class='row'>
+             <div class="col-6 pe-5" data-aos="fade-up">
+              <div class="text-center">
+                          <ul type="none">
+                                  <li><a href="{% url 'index' %}" style="color: white; text-decoration:none;"><br>HOME</a></li><br>
+                                  <li><a href="{% url 'aboutus' %}" style="color: white; text-decoration:none;">ABOUT</a></li><br>
+                                  <li><a href="{% url 'contactus' %}" style="color: white; text-decoration:none;">CONTACT</a></li><br>
+                                </ul>
+                           </div>
+                         </div>
+                           <div class="col-6 pe-5" data-aos="fade-up" style="color: white;">
+                            <div class="text-center"><h5><br>Let's chat!</h5>
+                            <p>imagebay23@gmail.com</p>
+                            <div class="icon"data-aos="zoom-out">
+                            <a href="https://www.facebook.com/" style="color: white; text-decoration:none;" ><i class="icofont-facebook icofont-2x">  </i></a> <a href="https://www.linkedin.com/" style="color: white; text-decoration:none;"><i class="icofont-linkedin icofont-2x">  </i></a><a href="https://www.twitter.com/" style="color: white; text-decoration:none;"><i class="icofont-twitter icofont-2x">  </i></a><a href="https://www.instagram.com/" style="color: white; text-decoration:none;"><i class="icofont-instagram icofont-2x"></i></a>
+                      </div>  </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center" data-aos="zoom-out"><br>
+    <h1 style="color:white;"><marquee>IMAGEbay</marquee></h1>
+  </div>
+</div>
+
+</div>
+
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js">
+</script>  
+<script>AOS.init({
+  duration: 1000
+});
+
+   // AOS.init({
+   //    offset: 200,
+   //    duration: 600,
+   //    easing: 'ease-in-sine',
+   //    delay: 100,
+   //  });</script>
+
+

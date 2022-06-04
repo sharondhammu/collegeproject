@@ -1,0 +1,114 @@
+{% load static %}
+<style>
+  html{
+ background-color: #e8e8e8;
+  font-family: sans-serif;
+}
+#menu{
+    left: 20px;
+    font-size: 4em;
+    font-weight: 800;
+    z-index: 111;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+    -webkit-transition: all 0.25s;
+    position: absolute;
+}
+
+#menu:hover{
+    transform: rotate(90deg);
+    color: #FF9900;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 75px;
+}
+
+li{
+    text-align: center;
+    text-transform: uppercase;
+    height: 70px;
+    line-height: 70px;
+    margin: 15px 0;
+    color: white;
+    cursor: pointer;
+    background-color: #00936E;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    transition: all 0.25s;
+}
+
+li:hover{
+ background-color: white;
+    color: black;
+    letter-spacing: 0.3em;
+    font-size: 1.5em
+}
+
+#lgMenu{
+    width: 400px;
+    height: 100%;
+    top: 0;
+    left: -400px;
+    overflow:hidden;
+    background-color: black;
+    box-shadow: 5px 5px 10px grey;
+    position: absolute;
+    z-index: 11;
+    opacity: 0;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    
+}
+
+#exit{
+    position: absolute;
+    right: 10px;
+    padding: 0px;
+    top: -10px;
+    font-size: 4em;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+}
+#exit:hover{
+    color:#FF9900;
+}
+
+#lgMenu.enter{
+    opacity: 1;
+    left: 0;
+}
+
+  </style>
+<div id="container">
+            <div id="menu">|||</div>
+            <div id="lgMenu">
+              <span id="exit">&times;</span>
+                <ul>
+                  <li>Link One</li>
+                  <li>Link Two</li>
+                  <li>Link Three</li>
+                   <li>Link Three</li>
+                   <li>Link Three</li>
+                   <li>Link Three</li>
+                   <li>Link Three</li>
+                </ul>
+            </div>
+            <script>
+              $(document).ready(function(){
+$("#menu").on("click", function(){
+   $("#menu").css("opacity", "0");
+    $("#lgMenu").addClass("enter");
+});
+    $("#exit").on("click", function(){
+       $("#lgMenu").removeClass("enter");
+        $("#menu").css("opacity", "1");
+    });
+});
+            </script>

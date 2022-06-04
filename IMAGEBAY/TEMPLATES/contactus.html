@@ -1,0 +1,133 @@
+
+                  {% extends 'header.html' %}
+ {% load static %}
+
+
+{% block content %}
+
+<style type="text/css">
+
+    form{
+    height: 540px;
+    width: 500px;
+    background-color: rgba(255,255,255,0.13);
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+
+
+form *{
+    font-family: 'Times New Roman',sans-serif;
+    color: #000000;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;}
+
+    form h1{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+     font-weight: bold;
+}
+
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder{
+    color: #ffffff;
+}
+
+button{
+    margin-top: 30px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body  {
+  background-image: url("{%static 'IMAGES/IMG_20220515_122341.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+h1 {text-align: center;
+   font-family: 'Times New Roman', serif;
+font-size: 50px;
+    font-weight: bold;
+    filter: drop-shadow(30px 10px 4px #606060);
+        
+    </style>
+    
+   <div id="grad1">
+            <div class="row pt-5">
+                <div class="col-6" data-aos="fade-up-right">
+            <img src="{%static 'IMAGES/contactus1-removebg-preview.png'%}"   align="center" width="100%">
+        </div>
+        <div class="col-6" data-aos="fade-up-left">
+             <form method = "POST">
+            {% csrf_token %}
+
+            <h1 class="text-center">Contact Us</h1>
+            <label>All fields are required.</label>
+
+            <label for="username">Name</label>
+   <input type="text" placeholder="Your Name"  name="user_name" required>
+
+ <label for="password">Email</label>
+   <input type="email" placeholder="your email"  name="user_email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+   <label for="message">Your Message</label>
+   <input type="message" placeholder="Message"  name="message" required> 
+
+   <button>CONTACT US</button>
+
+ 
+ </form>
+
+ </div>
+
+</div>
+{% if res == 1 %}<br><br>
+<div class="alert alert-success">
+    Thanks for contacting us.  We will try to reply you soon.
+</div>
+{% endif %}
+
+        </div>
+    </div>
+    </div><br><br>
+    
+
+
+{% endblock %}

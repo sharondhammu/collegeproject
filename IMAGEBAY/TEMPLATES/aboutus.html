@@ -1,0 +1,300 @@
+{% extends 'header.html' %}
+ {% load static %}
+{% block content %}
+<style type="text/css">
+    
+   body  {
+  background-image: url("{%static 'IMAGES/IMG_20220511_214237.jpg' %}");
+   background-size: cover ;
+
+  background-color: #cccccc;
+}
+
+ p {
+   font-family: 'Times New Roman', serif;
+   font-size: 25px;
+    font-weight: bold;
+   }
+
+#tiger p {
+   font-family: 'Times New Roman', serif;
+   font-size: 25px;
+    font-weight: bold;
+    text-align: justify;
+   }
+
+
+h1 {text-align: center;
+   font-family: 'Times New Roman', serif;}
+
+   .card{
+ background-color: transparent; 
+}
+
+
+   h5 {
+   font-family: 'Times New Roman', serif;}
+
+    h2 {
+   font-family: 'Times New Roman', serif;
+font-weight: bold;}
+
+.container-fluid .container .row {
+    font-family: 'Times New Roman', serif;
+}
+
+
+
+
+
+</style>
+<div class="container-fluid pt-5 pb-5">
+    <div class="container background-color:grey">
+        <div class="row p-5" data-aos="zoom-in-up">
+            <img src="{%static 'IMAGES\aboutus5.png'%}"   align="center" width="100%" height="410px">
+            </div>
+         </div>
+      </div>
+
+           <div class="row pt-5 pb-5 ps-5">
+            <div class="col-6 pt-5">
+                <div class="text-center" data-aos="fade-up-right">
+              <img src="{%static 'IMAGES/fotor.webp' %}" width="90%" height="320px"></div>  
+            </div>
+            <div class="col-6">
+                <div id="tiger">
+                <div class="text-center" data-aos="fade-up-left">
+            <p><br>IMAGEbay is a powerful, user-friendly online picture editing suite that uses proprietary technologies to provide anybody and everyone unprecedented editing control. Millions of people utilise the 'collage' and 'edit' capabilities on a daily basis. IMAGEbay allows the common user to shoot and edit great images. It's a utility website with a variety of design elements. One of the many unique features is 'One-Tap Enhance,' a tool developed to fix the most prevalent imaging problems in the shortest amount of time.</p></div></div>
+            
+            </div>
+
+
+        </div><br><br><br>
+
+
+<div class="container-fluid">
+  <div class= "text-center" data-aos="zoom-out" >
+  <h1><b>MEET THE TEAM</b></h1><br>
+  <p>Get to know the people behind IMAGEbay</p>
+</div>
+</div>
+
+<div class="container-fluid pt-5 pb-5">
+    <div class="container background-color:grey">
+        <div class="row ">
+            <div class="col-4" data-aos="fade-right">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Team</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/sharon.webp' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>SHARON DHAMMU</b></h5>
+                      <p class="card-text">CEO, Founder</p>
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <div class="col-4" data-aos="fade-up">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Team</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/resize (11).jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+
+                      <h5 class="card-title"><b>PALAK KAUR</b></h5>
+
+                      <p class="card-text">Senior Graphic Designer</p>
+                      
+                    </div>
+
+                      </div>
+            </div>
+        </div>
+            <div class="col-4" data-aos="fade-left">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Team</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/jasmine1.cms' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>JASMINE KAUR</b></h5>
+                      <p class="card-text">Support Specialist</p>
+              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<div class="container-fluid pt-5 pb-5">
+    <div class="container background-color:grey">
+        <div class="row ">
+            <div class="col-4">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Features</div>
+                <div class="card" style="">
+                   <img src="{%static 'IMAGES/blend.webp' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>BLEND IMAGES</b></h5>
+
+                       <p class="card-text">You can provide your pictures a boost by blending them together.</p>
+                  </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-4">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Features</div>
+
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/imagetext.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+
+                      <h5 class="card-title"><b>IMAGE TO TEXT</b></h5>
+
+                      <p class="card-text">Using this feature, you can convert an image having text to the text itself.</p>
+                  </div>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Features</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/coolaage.webp' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+
+                     <h5 class="card-title"><b>COLLAGE MAKER</b></h5>
+                      <p class="card-text">You can conveniently make collage of upto 10 images with collage maker.</p>
+              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="container-fluid" data-aos="zoom-out">
+  <div class= "text-center" ><br>
+  <h1><b>MISSION + VALUES</b></h1>
+  <p>Our goal is to provide tools that allow everyone, regardless of skill level or technical knowledge, to create gorgeous images and professional-quality designs.</p>
+</div>
+</div>
+
+<div class="container-fluid pt-5 pb-5">
+    <div class="container background-color:grey">
+        <div class="row ">
+            <div class="col-4" data-aos="zoom-in-right">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Values</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/35e3240b-83ea-4bce-8b06-076fc81ab639_bike-with-yellow-wall-min.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>MAKE COMPLEX THINGS SIMPLE</b></h5>
+                      <p class="card-text"> Aiming for the most simple, pragmatic and effective solution to any problem.</p>
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="col-4" data-aos="zoom-in-up">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Values</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/resize (9).jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+
+                      <h5 class="card-title"><b>SET CRAZY BIG GOALS AND MAKE THEM HAPPEN</b></h5>
+
+                      <p class="card-text">Set ambitious goals, prioritise, hustle to execute and celebrate success.</p>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4" data-aos="zoom-in-left">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Values</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/My project.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>BE A FORCE FOR GOOD FOR ALL</b></h5>
+                      <p class="card-text">Making the world a better place through positive actions.</p>
+              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid pt-5 pb-5">
+    <div class="container background-color:grey">
+        <div class="row ">
+            <div class="col-4" data-aos="zoom-out-right">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Values</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/BeFunky-photo4 (1).jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>EMPOWER OTHERS</b></h5>
+                      <p class="card-text">Empowering others to achieve their goals, globally and within IMAGEbay.</p>
+                  </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-4" data-aos="zoom-out-up">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Values</div>
+
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/BeFunky-photo11 (1).jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+
+                      <h5 class="card-title"><b>BE FUNKY</b></h5>
+
+                      <p class="card-text">Don’t be afraid to go against conventional wisdom and be your own unique self.</p>
+                  </div>
+                      
+                    </div>
+                </div>
+            </div>
+
+              <div class="col-4" data-aos="zoom-out-left">
+                <div class="card border-info mb-3" style="max-width: 22rem;">
+  <div class="card-header">Values</div>
+                <div class="card" style="">
+                    <img src="{%static 'IMAGES/hihi (1).jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>BE CREATIVE</b></h5>
+                      <p class="card-text">Let inspiration fuel your creativity,if it can be thought, it can be created.</p>
+              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+  <div class= "text-center" ><br>
+  <h1 class="head" data-aos="zoom-out"><b>IMAGEbay lets you edit images online for FREE!</b></h1><br>
+  <p class="1" data-aos="fade-right">1. Resize or crop images.  </p>
+  <p class="2" data-aos="fade-left">2. Merge images.</p>
+  <p class="4"data-aos="fade-right">3. Add animated text on an image.</p>
+  <p class="5"data-aos="fade-left">4. Add a mask to an image.</p>
+  <p class="6"data-aos="fade-right">5. Overlay images with gif animation.</p>
+  <p class="7"data-aos="fade-left">6. Sharpen, brighten, blur, transpose an image.</p>
+  <p class="8"data-aos="fade-right">7. And, many more features to come.</p><br><br>
+</div>
+</div>
+
+      
+{% endblock %}
